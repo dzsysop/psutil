@@ -60,7 +60,7 @@ def main():
     for nic, addrs in psutil.net_if_addrs().items():
         if nic in stats:
             print("%s (speed=%sMB, duplex=%s, mtu=%s, up=%s):" % (
-                nic, stats[nic].speed, duplex_map[stats[nic].duplex],
+                nic, stats[nic].speed, duplex_map[stats[nic].duplex,
                 stats[nic].mtu, "yes" if stats[nic].isup else "no"))
         else:
             print("%s:" % (nic))
